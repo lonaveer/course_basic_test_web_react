@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './app/components/Counter';
+import UserProfile from './app/components/UserProfile';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       </header>
 
       <Counter />
+      <hr />
+      <UserProfile username="Jaroon" email="jaroon@test.com" />
     </div>
   );
 }
