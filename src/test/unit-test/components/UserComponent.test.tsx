@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import UserComponent from '../../app/components/UserComponent';
+import UserComponent from '../../../app/components/UserComponent';
 
 describe('UserComponent', () => {
   it('fetches and displays user data', async () => {

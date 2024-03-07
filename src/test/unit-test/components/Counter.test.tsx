@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Counter from '../../app/components/Counter';
+import Counter from '../../../app/components/Counter';
 
 describe('Counter', () => {
   it('should increase the count by 1 when the increase button is clicked', async () => {

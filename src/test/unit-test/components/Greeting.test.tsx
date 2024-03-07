@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Greeting from '../../app/components/Greeting';
+import Greeting from '../../../app/components/Greeting';
 
 // ใช้ Jest framework สำหรับเขียน test case
 test('renders a greeting message', () => {

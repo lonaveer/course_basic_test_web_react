@@ -11,6 +11,7 @@
     "@types/node": "^16.18.86",
     "@types/react": "^18.2.63",
     "@types/react-dom": "^18.2.20",
+    "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -20,8 +21,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --verbose",
-    "test:coverage": "react-scripts test --coverage",
+    "test": "react-scripts test --testPathPattern=/test/unit-test/ --env=jsdom --verbose",
+    "test:coverage": "react-scripts test --testPathPattern=/test/unit-test/ --coverage",
+    "itest": "react-scripts test --testPathPattern=/test/integration-test/ --env=jsdom --verbose",
+    "itest:coverage": "react-scripts test --testPathPattern=/test/integration-test/ --coverage",
+    "alltest:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,6 +44,11 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios)/)"
     ]
   }
 }

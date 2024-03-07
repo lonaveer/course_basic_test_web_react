@@ -3,8 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './app/components/Counter';
 import UserProfile from './app/components/UserProfile';
+import LoginPage from './app/components/LoginPage';
 
 function App() {
+  /* istanbul ignore next */
   return (
     <div className="App">
       <header className="App-header">
@@ -25,6 +27,8 @@ function App() {
       <Counter />
       <hr />
       <UserProfile username="Jaroon" email="jaroon@test.com" />
+      <hr />
+      <LoginPage onLogin={(username, password) => console.log(username, password)} />
     </div>
   );
 }
