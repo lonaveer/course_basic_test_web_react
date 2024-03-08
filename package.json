@@ -25,6 +25,7 @@
     "test:coverage": "react-scripts test --testPathPattern=/test/unit-test/ --coverage",
     "itest": "react-scripts test --testPathPattern=/test/integration-test/ --env=jsdom --verbose",
     "itest:coverage": "react-scripts test --testPathPattern=/test/integration-test/ --coverage",
+    "alltest": "react-scripts test --env=jsdom --verbose",
     "alltest:coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
