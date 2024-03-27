@@ -17,6 +17,8 @@ describe('UserDataComponent Integration Test', () => {
 
     render(<UserDataComponent />);
 
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+
     // รอและตรวจสอบว่าข้อความ Loading หายไป
     await waitFor(() => expect(screen.queryByText('Loading...')).toBeNull());
 

@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../services/loginService';
 
-// Interface สำหรับ props ของคอมโพเนนต์
-export interface LoginProps {
-  onLogin: (username: string, password: string) => void;
-}
-
-// คอมโพเนนต์ LoginPage
-const LoginPage: React.FC<LoginProps> = ({ onLogin }) => {
+const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    onLogin(username, password);
+    login(username, password, navigate);
   };
 
   return (
